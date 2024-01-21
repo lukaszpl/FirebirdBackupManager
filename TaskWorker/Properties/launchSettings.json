@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TaskWorker": {
+      "commandName": "Project",
+      "commandLineArgs": "0"
+    }
+  }
+}
