@@ -22,7 +22,7 @@ namespace TaskWorker
                 JsonLoader.LoadDataFromJson();
                 JsonLoader.LoadResults(); //load results if exists
                 JsonLoader.LoadNotificationSettings(); //load email settings if exists
-                StartTask(taskId, true);
+                StartTask(taskId, false);
             }
             else
             {
