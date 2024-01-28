@@ -15,10 +15,8 @@ Main application features:
 
 Screenshots:
 ![obraz](https://github.com/lukaszpl/FirebirdBackupManager/assets/15281422/4d5a4bed-eccd-40ee-ac89-d5f1645a110f)
-![obraz](https://github.com/lukaszpl/FirebirdBackupManager/assets/15281422/0fef0225-4c3e-4654-93ac-82e6718fa5f2)
 ![obraz](https://github.com/lukaszpl/FirebirdBackupManager/assets/15281422/984dcde2-b218-478e-b751-ed6bd212ee0d)
 ![obraz](https://github.com/lukaszpl/FirebirdBackupManager/assets/15281422/73d35f6d-a29e-4301-8ae4-ae673a53fc1e)
-![obraz](https://github.com/lukaszpl/FirebirdBackupManager/assets/15281422/64fd7436-5f6c-44bb-8d7b-dfb958a30a3f)
 
 
 
