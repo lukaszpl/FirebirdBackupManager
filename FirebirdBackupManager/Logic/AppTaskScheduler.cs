@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.DirectoryServices.ActiveDirectory;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -75,7 +76,27 @@ namespace FirebirdBackupManager.Logic
             }
         }
 
-        private void ConvertTimeToInts(string time)
+        public int StartTask(string taskName)
+        {
+            using (TaskService taskService = new TaskService())
+            {
+                TaskFolder rootFolder = taskService.RootFolder;
+                TaskFolder taskFolder;
+                if (rootFolder.SubFolders.Exists(taskFolderName))
+                {
+                    taskFolder = rootFolder.SubFolders[taskFolderName];
+                    foreach (var task in taskFolder.GetTasks())
+                    {
+                        if (task.Name == taskName)
+                            return task.Run().LastTaskResult;
+                    }
+                }              
+            }
+            return -1;
+        }
+    
+
+    private void ConvertTimeToInts(string time)
         {
             string[] timeArray = time.Split(':');
             if (timeArray.Length == 2 && int.TryParse(timeArray[0], out int hour) && int.TryParse(timeArray[1], out int minutes))

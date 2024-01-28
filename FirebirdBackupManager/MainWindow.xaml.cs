@@ -19,6 +19,8 @@ using FirebirdBackupManager.Views.StorageWindows;
 using FirebirdBackupManager.Logic;
 using Newtonsoft.Json;
 using System.IO;
+using Microsoft.Win32.TaskScheduler;
+using System.DirectoryServices.ActiveDirectory;
 namespace FirebirdBackupManager
 {
     /// <summary>
@@ -79,6 +81,42 @@ namespace FirebirdBackupManager
         {
             AboutWindow aboutWindow = new AboutWindow();
             aboutWindow.ShowDialog();
+        }
+
+        private void EditTask_button_Click(object sender, RoutedEventArgs e)
+        {
+            ListViewTaskItem selectedTaskItem = (ListViewTaskItem)tasks_listView.SelectedItem;
+            if (selectedTaskItem != null)
+            {
+                AddTaskWindow addTaskWindow = new AddTaskWindow(selectedTaskItem);
+                addTaskWindow.ShowDialog();
+            }
+        }
+
+        private void start_button_Click(object sender, RoutedEventArgs e)
+        {
+            ListViewTaskItem selectedTaskItem = (ListViewTaskItem)tasks_listView.SelectedItem;
+            if(selectedTaskItem != null)
+            {
+                if (selectedTaskItem.lastResult != "running...")
+                {
+                    AppTaskScheduler scheduler = new AppTaskScheduler();
+                    
+                    int result = scheduler.StartTask("ID" + selectedTaskItem.Id);
+                    if(result != 267009) //task is currently running
+                    { 
+                        MessageBox.Show(Languages.Lang.taskNotStarted, Languages.Lang.error, MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                    else
+                    {
+                        selectedTaskItem.lastResult = "running...";
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(Languages.Lang.taskIsRunning, Languages.Lang.warning, MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+            }
         }
     }
 }

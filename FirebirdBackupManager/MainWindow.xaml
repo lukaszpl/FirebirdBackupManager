@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:FirebirdBackupManager"
         xmlns:p="clr-namespace:FirebirdBackupManager.Languages"
         mc:Ignorable="d"
-        Title="{x:Static p:Lang.appTitle}" Height="485" Width="1010" Closing="Window_Closing">
+        Title="{x:Static p:Lang.appTitle}" Height="525" Width="1165" Closing="Window_Closing" MinWidth="800" MinHeight="500">
     <Grid>
         <Menu Height="24" VerticalAlignment="Top">
             <MenuItem Header="{x:Static p:Lang.settings}" Height="24">
@@ -26,12 +26,20 @@
                     <GridViewColumn Header="{x:Static p:Lang.databasePath}" Width="150" DisplayMemberBinding="{Binding databasePath}" />
                     <GridViewColumn Header="{x:Static p:Lang.lastActive}" Width="150" DisplayMemberBinding="{Binding lastActive}" />
                     <GridViewColumn Header="{x:Static p:Lang.lastResult}" Width="100" DisplayMemberBinding="{Binding lastResult}" />
+                    <GridViewColumn Header="{x:Static p:Lang.scheduledAt}" Width="150" DisplayMemberBinding="{Binding scheduledAt}" />
                     <GridViewColumn Header="{x:Static p:Lang.createdAt}" Width="150" DisplayMemberBinding="{Binding createdAt}" />
                     <GridViewColumn Header="{x:Static p:Lang.comment}" Width="200" DisplayMemberBinding="{Binding comment}" />
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="AddTask_button" Content="Add" HorizontalAlignment="Left" Margin="10,29,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.252,-0.248" Click="AddTask_button_Click"/>
-        <Button x:Name="delete_Button" Content="Delete" HorizontalAlignment="Left" Margin="41,29,0,0" VerticalAlignment="Top" Click="delete_Button_Click"/>
+        <Grid Height="20" VerticalAlignment="Top" Margin="10,31,0,0" HorizontalAlignment="Left" Width="145">
+            <Button x:Name="AddTask_button" Content="{x:Static p:Lang.add}" VerticalAlignment="Center" RenderTransformOrigin="-0.252,-0.248" Click="AddTask_button_Click" Margin="0,0,99,0"/>
+            <Button x:Name="delete_Button" Content="{x:Static p:Lang.delete}" VerticalAlignment="Center" Click="delete_Button_Click" Margin="0,0,10,0" HorizontalAlignment="Right" Width="42"/>
+            <Button x:Name="EditTask_button" Content="{x:Static p:Lang.edit}" Margin="0,0,57,0" VerticalAlignment="Center" RenderTransformOrigin="-0.252,-0.248" Click="EditTask_button_Click" HorizontalAlignment="Right" Width="37"/>
+        </Grid>
+        <Button x:Name="start_button" HorizontalAlignment="Right" Margin="0,26,10,0" VerticalAlignment="Top" Height="25" Width="23" Click="start_button_Click">
+            <Image Source="/icons/play-icon.png" />
+        </Button>
+
     </Grid>
 </Window>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -26,5 +27,6 @@ namespace FirebirdBackupManager.Views
             appName_textBox.Text = "Firebird backup manager " + Assembly.GetExecutingAssembly().GetName().Version.ToString();
             authorInfo_textBox.Text = Languages.Lang.author + " Łukasz Soroczyński";
         }
+
     }
 }

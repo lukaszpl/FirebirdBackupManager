@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:FirebirdBackupManager.Views"
         xmlns:p="clr-namespace:FirebirdBackupManager.Languages"
         mc:Ignorable="d"
-        Title="{x:Static p:Lang.serverManager}" Height="320" Width="425" MinHeight="320" MinWidth="425">
+        Title="{x:Static p:Lang.serverManager}" Height="290" Width="370" MinHeight="320" MinWidth="425">
     <Grid>
         <ListView Name="FbServers_listView" Margin="10,49,10,10">
             <ListView.View>
@@ -17,8 +17,9 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Button x:Name="AddServer_button" Content="{x:Static p:Lang.addServer}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.505,-1.251" Click="AddServer_button_Click"/>
-        <Button x:Name="DeleteServer_button" Content="{x:Static p:Lang.delete}" HorizontalAlignment="Left" Margin="76,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.505,-1.251" Click="DeleteServer_button_Click"/>
-
+        <Grid Height="44" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150" Margin="10,0,0,0">
+            <Button x:Name="AddServer_button" Content="{x:Static p:Lang.addServer}" Margin="0,15,67,0" VerticalAlignment="Top" RenderTransformOrigin="-0.505,-1.251" Click="AddServer_button_Click"/>
+            <Button x:Name="DeleteServer_button" Content="{x:Static p:Lang.delete}" HorizontalAlignment="Right" Margin="0,15,24,0" VerticalAlignment="Top" RenderTransformOrigin="-0.505,-1.251" Click="DeleteServer_button_Click"/>
+        </Grid>
     </Grid>
 </Window>

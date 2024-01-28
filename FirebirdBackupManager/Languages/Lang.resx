@@ -171,6 +171,9 @@
   <data name="help" xml:space="preserve">
     <value>Help</value>
   </data>
+  <data name="lang" xml:space="preserve">
+    <value>Language</value>
+  </data>
   <data name="lastActive" xml:space="preserve">
     <value>Last active</value>
   </data>
@@ -206,6 +209,12 @@
   </data>
   <data name="schedule" xml:space="preserve">
     <value>Schedule</value>
+  </data>
+  <data name="scheduledAt" xml:space="preserve">
+    <value>Scheduled at</value>
+  </data>
+  <data name="scheduleError" xml:space="preserve">
+    <value>The task has not been scheduled!</value>
   </data>
   <data name="sendMailInfo" xml:space="preserve">
     <value>Test mail sended!</value>
@@ -252,14 +261,23 @@
   <data name="success" xml:space="preserve">
     <value>Success</value>
   </data>
+  <data name="taskIsRunning" xml:space="preserve">
+    <value>Task is running!</value>
+  </data>
   <data name="taskName" xml:space="preserve">
     <value>Task name</value>
+  </data>
+  <data name="taskNotStarted" xml:space="preserve">
+    <value>The task could not be started. Check if the program is installed correctly.</value>
   </data>
   <data name="time" xml:space="preserve">
     <value>Time (for example 18:00)</value>
   </data>
   <data name="user" xml:space="preserve">
     <value>User</value>
+  </data>
+  <data name="warning" xml:space="preserve">
+    <value>Warning</value>
   </data>
   <data name="windowsCredentials" xml:space="preserve">
     <value>Windows Credentials</value>

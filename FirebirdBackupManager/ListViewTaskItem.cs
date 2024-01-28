@@ -10,7 +10,7 @@ using System.Xml.Linq;
 
 namespace FirebirdBackupManager
 {
-    internal class ListViewTaskItem : TaskItem, INotifyPropertyChanged
+    public class ListViewTaskItem : TaskItem, INotifyPropertyChanged
     {
 
         public string? serverIP { get; set; }
@@ -40,11 +40,43 @@ namespace FirebirdBackupManager
                 }
             }
         }
+
+        private string? ScheduledAt;
+        public string? scheduledAt 
+        { 
+            get
+            {
+                if(scheduleType == ScheduleType.Everyday)
+                {
+                    return "Everyday at " + timeHour.ToString();
+                }
+                else
+                {
+                    return scheduleType.ToString() + " " + timeHour.ToString();
+                }
+            }
+            set {OnPropertyChanged(nameof(ScheduledAt)); }
+        }
+
+        private string? Comment;
+        public string? comment
+        {
+            get { return Comment; }
+            set { Comment = value; OnPropertyChanged(nameof(Comment));}
+        }
+        private string? DatabasePath;
+        public string? databasePath
+        {
+            get { return DatabasePath; }
+            set { DatabasePath = value; OnPropertyChanged(nameof(DatabasePath));}
+        }
         public ListViewTaskItem(int id, string? taskName, DateTime? createdAt, string lastResult, string lastActive, string? comment, ScheduleType scheduleType, string timeHour, int retentionTime, int fBServerId, int storageId, string databasePath, string serverIP) : base(id, taskName, createdAt, comment, scheduleType, timeHour, retentionTime, databasePath, fBServerId, storageId)
         {
             this.serverIP = serverIP;
             this.lastActive = lastActive;
             this.lastResult = lastResult;
+            this.Comment = comment;
+            this.DatabasePath = databasePath;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

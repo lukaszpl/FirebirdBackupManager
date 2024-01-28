@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:FirebirdBackupManager.Views"
         xmlns:p="clr-namespace:FirebirdBackupManager.Languages"
         mc:Ignorable="d"
-        Title="" Height="350" Width="325" MinHeight="350" MinWidth="425" ResizeMode="NoResize" WindowStyle="ToolWindow">
+        Title="{x:Static p:Lang.addTask}" Height="350" Width="325" MinHeight="350" MinWidth="425" ResizeMode="NoResize" WindowStyle="ToolWindow">
     <Grid>
         <TabControl>
             <TabItem Header="{x:Static p:Lang.settings}">

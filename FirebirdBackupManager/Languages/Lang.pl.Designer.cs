@@ -22,14 +22,14 @@ namespace FirebirdBackupManager.Languages {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Lang {
+    public class Lang_x {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Lang() {
+        internal Lang_x() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace FirebirdBackupManager.Languages {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("FirebirdBackupManager.Languages.Lang", typeof(Lang).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("FirebirdBackupManager.Languages.Lang.x", typeof(Lang_x).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu About.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu O programie.
         /// </summary>
         public static string about {
             get {
@@ -70,7 +70,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Add.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Dodaj.
         /// </summary>
         public static string add {
             get {
@@ -79,7 +79,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Add server.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Dodaj serwer.
         /// </summary>
         public static string addServer {
             get {
@@ -88,7 +88,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Add storage.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Dodaj magazyn.
         /// </summary>
         public static string addStorage {
             get {
@@ -97,7 +97,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Add task.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Dodaj zadanie.
         /// </summary>
         public static string addTask {
             get {
@@ -115,7 +115,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Author:.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Autor:.
         /// </summary>
         public static string author {
             get {
@@ -124,7 +124,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Comment.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Komentarz.
         /// </summary>
         public static string comment {
             get {
@@ -133,7 +133,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Created at.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Utworzony o.
         /// </summary>
         public static string createdAt {
             get {
@@ -142,7 +142,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Database path.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Ścieżka do bazy.
         /// </summary>
         public static string databasePath {
             get {
@@ -151,7 +151,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Delete.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Usuń.
         /// </summary>
         public static string delete {
             get {
@@ -160,7 +160,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Edit.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Edytuj.
         /// </summary>
         public static string edit {
             get {
@@ -169,7 +169,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Error.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Błąd.
         /// </summary>
         public static string error {
             get {
@@ -178,7 +178,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu You are trying to remove an item that is in use. First, remove the tasks associated with this server!.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Próbujesz usunąć element, który jest w użyciu. Najpierw usuń zadania powiązane z tym serwerem!.
         /// </summary>
         public static string ErrorDeleteFbServerWhenTasksAreCorrelated {
             get {
@@ -187,7 +187,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu You are trying to remove an item that is in use. First, remove the tasks associated with this storage!.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Próbujesz usunąć element, który jest w użyciu. Najpierw usuń zadania powiązane z tym zasobem!.
         /// </summary>
         public static string ErrorDeleteStorageWhenTasksAreCorrelated {
             get {
@@ -196,7 +196,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Every day.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Codziennie.
         /// </summary>
         public static string everyDay {
             get {
@@ -205,7 +205,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Directory not exists or path is invalid!.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Katalog nie istnieje lub ścieżka jest nieprawidłowa!.
         /// </summary>
         public static string folderNotExists {
             get {
@@ -214,7 +214,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Help.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Pomoc.
         /// </summary>
         public static string help {
             get {
@@ -223,7 +223,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Language.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Język.
         /// </summary>
         public static string lang {
             get {
@@ -232,7 +232,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Last active.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Ostatnia aktywność.
         /// </summary>
         public static string lastActive {
             get {
@@ -241,7 +241,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Last Result.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Ostatni status.
         /// </summary>
         public static string lastResult {
             get {
@@ -250,7 +250,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Complete the missing fields.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Uzupełnij brakujące pola.
         /// </summary>
         public static string missingFields {
             get {
@@ -259,7 +259,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Name.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Nazwa.
         /// </summary>
         public static string name {
             get {
@@ -268,7 +268,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Notification settings.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Ustawienia powiadomień.
         /// </summary>
         public static string notificationSettingsWindow {
             get {
@@ -277,7 +277,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Notifications settings.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Ustawienia powiadomień.
         /// </summary>
         public static string notificationsSettings {
             get {
@@ -286,7 +286,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Password.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Hasło.
         /// </summary>
         public static string password {
             get {
@@ -295,7 +295,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Path.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Ścieżka.
         /// </summary>
         public static string path {
             get {
@@ -304,7 +304,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Reciver.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Odbiorca.
         /// </summary>
         public static string reciver {
             get {
@@ -313,7 +313,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Retention time (for example 7 days).
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Czas retencji (na przykład 7 dni).
         /// </summary>
         public static string retentionTime {
             get {
@@ -322,7 +322,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Save.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Zapisz.
         /// </summary>
         public static string save {
             get {
@@ -331,7 +331,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Schedule.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Harmonogram.
         /// </summary>
         public static string schedule {
             get {
@@ -340,7 +340,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Scheduled at.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Zaplanowane na.
         /// </summary>
         public static string scheduledAt {
             get {
@@ -349,7 +349,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu The task has not been scheduled!.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Zadanie nie zostało zaplanowane!.
         /// </summary>
         public static string scheduleError {
             get {
@@ -358,7 +358,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Test mail sended!.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Mail testowy został wysłany!.
         /// </summary>
         public static string sendMailInfo {
             get {
@@ -367,7 +367,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Server IP.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu IP serwera.
         /// </summary>
         public static string serverIP {
             get {
@@ -376,7 +376,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Server manager.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Menadżer serwera.
         /// </summary>
         public static string serverManager {
             get {
@@ -385,7 +385,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Server name.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Nazwa serwera.
         /// </summary>
         public static string serverName {
             get {
@@ -394,7 +394,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Server port.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Port.
         /// </summary>
         public static string serverPort {
             get {
@@ -403,7 +403,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Settings.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Ustawienia.
         /// </summary>
         public static string settings {
             get {
@@ -412,7 +412,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu SMTP Password.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu SMTP Hasło.
         /// </summary>
         public static string smtpPassword {
             get {
@@ -430,7 +430,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu SMTP Server.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu SMTP Serwer.
         /// </summary>
         public static string smtpServer {
             get {
@@ -439,7 +439,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu SMTP Username.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu SMTP Nazwa użytkownika.
         /// </summary>
         public static string smtpUsername {
             get {
@@ -448,7 +448,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Storage.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Magazyn.
         /// </summary>
         public static string storage {
             get {
@@ -457,7 +457,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Storage settings.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Ustawienia magazynów.
         /// </summary>
         public static string storageSettings {
             get {
@@ -466,7 +466,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Storage type.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Typ magazynu.
         /// </summary>
         public static string storageType {
             get {
@@ -475,7 +475,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu The connection has been established..
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Połączenie zostało ustanowione!.
         /// </summary>
         public static string succesConnectionMsg {
             get {
@@ -484,7 +484,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Success.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Sukces.
         /// </summary>
         public static string success {
             get {
@@ -493,7 +493,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Task is running!.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Zadanie już działa!.
         /// </summary>
         public static string taskIsRunning {
             get {
@@ -502,7 +502,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Task name.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Nazwa zadania.
         /// </summary>
         public static string taskName {
             get {
@@ -511,7 +511,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu The task could not be started. Check if the program is installed correctly..
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Nie można rozpocząć zadania. Sprawdź, czy program został poprawnie zainstalowany..
         /// </summary>
         public static string taskNotStarted {
             get {
@@ -520,7 +520,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Time (for example 18:00).
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Czas (na przykład 18:00).
         /// </summary>
         public static string time {
             get {
@@ -529,7 +529,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu User.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Użytkownik.
         /// </summary>
         public static string user {
             get {
@@ -538,7 +538,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Warning.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Ostrzeżenie.
         /// </summary>
         public static string warning {
             get {
@@ -547,7 +547,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Windows Credentials.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Poświadczenia systemu Windows.
         /// </summary>
         public static string windowsCredentials {
             get {
@@ -556,7 +556,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu The password is incorrect or the login password has not been set!.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Hasło jest nieprawidłowe lub nie zostało ustawione!.
         /// </summary>
         public static string windowsCredentialsWindowError {
             get {
@@ -565,7 +565,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Scheduling a task requires credentials for your current Windows account.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Zaplanowanie zadania wymaga poświadczeń dla bieżącego konta systemu Windows.
         /// </summary>
         public static string windowsCredentialsWindowInfo {
             get {
@@ -574,7 +574,7 @@ namespace FirebirdBackupManager.Languages {
         }
         
         /// <summary>
-        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Windows logon name.
+        /// Wyszukuje zlokalizowany ciąg podobny do ciągu Nazwa użytkownika Windows.
         /// </summary>
         public static string windowsLogin {
             get {

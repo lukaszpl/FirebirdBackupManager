@@ -117,7 +117,178 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="about" xml:space="preserve">
+    <value>O programie</value>
+  </data>
+  <data name="add" xml:space="preserve">
+    <value>Dodaj</value>
+  </data>
+  <data name="addServer" xml:space="preserve">
+    <value>Dodaj serwer</value>
+  </data>
+  <data name="addStorage" xml:space="preserve">
+    <value>Dodaj magazyn</value>
+  </data>
+  <data name="addTask" xml:space="preserve">
+    <value>Dodaj zadanie</value>
+  </data>
   <data name="appTitle" xml:space="preserve">
     <value>Firebird backup manager</value>
+  </data>
+  <data name="author" xml:space="preserve">
+    <value>Autor:</value>
+  </data>
+  <data name="comment" xml:space="preserve">
+    <value>Komentarz</value>
+  </data>
+  <data name="createdAt" xml:space="preserve">
+    <value>Utworzony o</value>
+  </data>
+  <data name="databasePath" xml:space="preserve">
+    <value>Ścieżka do bazy</value>
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value>Usuń</value>
+  </data>
+  <data name="edit" xml:space="preserve">
+    <value>Edytuj</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>Błąd</value>
+  </data>
+  <data name="ErrorDeleteFbServerWhenTasksAreCorrelated" xml:space="preserve">
+    <value>Próbujesz usunąć element, który jest w użyciu. Najpierw usuń zadania powiązane z tym serwerem!</value>
+  </data>
+  <data name="ErrorDeleteStorageWhenTasksAreCorrelated" xml:space="preserve">
+    <value>Próbujesz usunąć element, który jest w użyciu. Najpierw usuń zadania powiązane z tym zasobem!</value>
+  </data>
+  <data name="everyDay" xml:space="preserve">
+    <value>Codziennie</value>
+  </data>
+  <data name="folderNotExists" xml:space="preserve">
+    <value>Katalog nie istnieje lub ścieżka jest nieprawidłowa!</value>
+  </data>
+  <data name="help" xml:space="preserve">
+    <value>Pomoc</value>
+  </data>
+  <data name="lang" xml:space="preserve">
+    <value>Język</value>
+  </data>
+  <data name="lastActive" xml:space="preserve">
+    <value>Ostatnia aktywność</value>
+  </data>
+  <data name="lastResult" xml:space="preserve">
+    <value>Ostatni status</value>
+  </data>
+  <data name="missingFields" xml:space="preserve">
+    <value>Uzupełnij brakujące pola</value>
+  </data>
+  <data name="name" xml:space="preserve">
+    <value>Nazwa</value>
+  </data>
+  <data name="notificationSettingsWindow" xml:space="preserve">
+    <value>Ustawienia powiadomień</value>
+  </data>
+  <data name="notificationsSettings" xml:space="preserve">
+    <value>Ustawienia powiadomień</value>
+  </data>
+  <data name="password" xml:space="preserve">
+    <value>Hasło</value>
+  </data>
+  <data name="path" xml:space="preserve">
+    <value>Ścieżka</value>
+  </data>
+  <data name="reciver" xml:space="preserve">
+    <value>Odbiorca</value>
+  </data>
+  <data name="retentionTime" xml:space="preserve">
+    <value>Czas retencji (na przykład 7 dni)</value>
+  </data>
+  <data name="save" xml:space="preserve">
+    <value>Zapisz</value>
+  </data>
+  <data name="schedule" xml:space="preserve">
+    <value>Harmonogram</value>
+  </data>
+  <data name="scheduledAt" xml:space="preserve">
+    <value>Zaplanowane na</value>
+  </data>
+  <data name="scheduleError" xml:space="preserve">
+    <value>Zadanie nie zostało zaplanowane!</value>
+  </data>
+  <data name="sendMailInfo" xml:space="preserve">
+    <value>Mail testowy został wysłany!</value>
+  </data>
+  <data name="serverIP" xml:space="preserve">
+    <value>IP serwera</value>
+  </data>
+  <data name="serverManager" xml:space="preserve">
+    <value>Menadżer serwera</value>
+  </data>
+  <data name="serverName" xml:space="preserve">
+    <value>Nazwa serwera</value>
+  </data>
+  <data name="serverPort" xml:space="preserve">
+    <value>Port</value>
+  </data>
+  <data name="settings" xml:space="preserve">
+    <value>Ustawienia</value>
+  </data>
+  <data name="smtpPassword" xml:space="preserve">
+    <value>SMTP Hasło</value>
+  </data>
+  <data name="smtpPort" xml:space="preserve">
+    <value>SMTP Port</value>
+  </data>
+  <data name="smtpServer" xml:space="preserve">
+    <value>SMTP Serwer</value>
+  </data>
+  <data name="smtpUsername" xml:space="preserve">
+    <value>SMTP Nazwa użytkownika</value>
+  </data>
+  <data name="storage" xml:space="preserve">
+    <value>Magazyn</value>
+  </data>
+  <data name="storageSettings" xml:space="preserve">
+    <value>Ustawienia magazynów</value>
+  </data>
+  <data name="storageType" xml:space="preserve">
+    <value>Typ magazynu</value>
+  </data>
+  <data name="succesConnectionMsg" xml:space="preserve">
+    <value>Połączenie zostało ustanowione!</value>
+  </data>
+  <data name="success" xml:space="preserve">
+    <value>Sukces</value>
+  </data>
+  <data name="taskIsRunning" xml:space="preserve">
+    <value>Zadanie już działa!</value>
+  </data>
+  <data name="taskName" xml:space="preserve">
+    <value>Nazwa zadania</value>
+  </data>
+  <data name="taskNotStarted" xml:space="preserve">
+    <value>Nie można rozpocząć zadania. Sprawdź, czy program został poprawnie zainstalowany.</value>
+  </data>
+  <data name="time" xml:space="preserve">
+    <value>Czas (na przykład 18:00)</value>
+  </data>
+  <data name="user" xml:space="preserve">
+    <value>Użytkownik</value>
+  </data>
+  <data name="warning" xml:space="preserve">
+    <value>Ostrzeżenie</value>
+  </data>
+  <data name="windowsCredentials" xml:space="preserve">
+    <value>Poświadczenia systemu Windows</value>
+  </data>
+  <data name="windowsCredentialsWindowError" xml:space="preserve">
+    <value>Hasło jest nieprawidłowe lub nie zostało ustawione!</value>
+  </data>
+  <data name="windowsCredentialsWindowInfo" xml:space="preserve">
+    <value>Zaplanowanie zadania wymaga poświadczeń dla bieżącego konta systemu Windows</value>
+  </data>
+  <data name="windowsLogin" xml:space="preserve">
+    <value>Nazwa użytkownika Windows</value>
   </data>
 </root>

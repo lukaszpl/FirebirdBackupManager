@@ -2,6 +2,7 @@
 using CommonClassLibrary.Models;
 using CommonClassLibrary.Models.Storage;
 using Newtonsoft.Json;
+using System;
 using System.Diagnostics;
 using System.Security.Principal;
 using System.Threading.Tasks;
@@ -9,20 +10,19 @@ using System.Threading.Tasks;
 namespace TaskWorker
 {
     internal class Program
-    {
-       
+    {    
         static string pathToGbak = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\firebird\\3.0.10\\gbak.exe";
         static int taskId = -1;
 
 
         static void Main(string[] args)
         {
-            if (CheckAndLoadInputData(args) && CheckFilesExists())
+            if (CheckAndLoadInputData(args) && CheckFilesExists()) //load input data (args) and check conf files exists
             {
-                JsonLoader.LoadDataFromJson();
+                JsonLoader.LoadDataFromJson(); //load data (FbServers, Storage, Tasks)
                 JsonLoader.LoadResults(); //load results if exists
                 JsonLoader.LoadNotificationSettings(); //load email settings if exists
-                StartTask(taskId, false);
+                StartTask(taskId);
             }
             else
             {
@@ -65,15 +65,15 @@ namespace TaskWorker
             }
             else
             {
-                Directory.CreateDirectory(JsonLoader.jsonDirectory);
-                return CheckFilesExists();
+                Console.WriteLine("missing directory: " + JsonLoader.jsonDirectory);
+                return false;
             }
             return true;
         }
 
-       
 
-        private static void StartTask(int taskId, bool saveDetailsLogs)
+        static string output = "Firebird Backup Manager log file:\n";
+        private static void StartTask(int taskId)
         {
             foreach(TaskItem task in JsonLoader.tasks)
             {
@@ -90,26 +90,16 @@ namespace TaskWorker
                     var procGbak = new Process();
                     procGbak.StartInfo.FileName = pathToGbak;
                     procGbak.StartInfo.RedirectStandardOutput = true;
+                    procGbak.StartInfo.RedirectStandardError = true;
                     procGbak.StartInfo.UseShellExecute = false;
                     procGbak.StartInfo.Arguments = parameters;
                     procGbak.Start();
-                    string output = "";
-                    procGbak.OutputDataReceived += (sender, e) =>
-                    {
-                        if (e.Data != null)
-                        {
-                            Console.WriteLine(e.Data);
-                            output += e.Data + "\n";
-                        }
-                    };
-                    //Console.WriteLine(procGbak.StartInfo.Arguments);
+                    procGbak.OutputDataReceived += new DataReceivedEventHandler(OutputHandler);
+                    procGbak.ErrorDataReceived += new DataReceivedEventHandler(OutputHandler);
                     procGbak.BeginOutputReadLine();
+                    procGbak.BeginErrorReadLine();
                     procGbak.WaitForExit();                     
-                    Console.WriteLine("Result: " + procGbak.ExitCode);
-                    if(saveDetailsLogs)
-                    {
-                        SaveLog(output, pathToTaskSubfolder);
-                    }
+                    Console.WriteLine("Result: " + procGbak.ExitCode);                
                     //save result
                     SaveTaskResult(taskId, procGbak.ExitCode, "complete");
                     //delete old backups, if new backup is created
@@ -119,12 +109,18 @@ namespace TaskWorker
                     }
                     else
                     {
+                        //if error, save log
+                        SaveLog(output, pathToTaskSubfolder);
                         //if backup is not created, send info to email
                         SendEmail("Task Error: " + task.taskName + " error code: " + procGbak.ExitCode + " Time: " + DateTime.Now);
                     }
                     Environment.Exit(procGbak.ExitCode);
                 }
             }
+        }
+        static void OutputHandler(object sendingProcess, DataReceivedEventArgs outLine)
+        {
+            output += outLine.Data + "\n";
         }
         private static void SaveTaskResult(int taskId, int lastResult, string status)
         {
@@ -140,6 +136,10 @@ namespace TaskWorker
                     lastResultString = "error code: " + lastResult;
                 }
             }
+            else
+            {
+                lastResultString = "running...";
+            }
             //
             if (JsonLoader.taskResults != null)
             {
@@ -148,12 +148,13 @@ namespace TaskWorker
                 {
                     if (taskResult.taskId == taskId)
                     {
-                        taskExists = true;
+                        taskExists = true; //task exists
                         taskResult.lastResult = lastResultString;
                         taskResult.lastActive = DateTime.Now;
                         taskResult.status = status;
                     }
                 }
+                //if it is new task, create it
                 if(!taskExists)
                     JsonLoader.taskResults.Add(new TaskResult(taskId, DateTime.Now, lastResultString, status));
             }
@@ -171,10 +172,7 @@ namespace TaskWorker
             {
                 Directory.CreateDirectory(pathToTaskSubfolder + "\\logs");
             }
-            else
-            {
-                File.WriteAllText(pathToTaskSubfolder + "\\logs\\" + DateTime.Now.ToString("dd-MM-yyy-HH-mm") + ".log", log);
-            }
+            File.WriteAllText(pathToTaskSubfolder + "\\logs\\" + DateTime.Now.ToString("dd-MM-yyy-HH-mm") + ".log", log);
         }
         private static string GetServerIPById(int id)
         {
@@ -231,6 +229,11 @@ namespace TaskWorker
                     Directory.CreateDirectory(pathToTaskSubfolder);
                 }
                 return pathToTaskSubfolder;
+            }
+            else
+            {
+                Console.WriteLine("Storage path is invalid!");
+                Environment.Exit(102);
             }
             return "";
         }

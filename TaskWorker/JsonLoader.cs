@@ -31,13 +31,27 @@ namespace TaskWorker
         {
             if (File.Exists(resultsFilePath))
             {
-                taskResults = JsonConvert.DeserializeObject<List<TaskResult>>(File.ReadAllText(resultsFilePath));
+                try
+                {
+                    taskResults = JsonConvert.DeserializeObject<List<TaskResult>>(File.ReadAllText(resultsFilePath));
+                }catch (Exception e)
+                {
+                    Console.WriteLine($"{e.Message}");
+                    Environment.Exit(101); //exit with code 101 - problem with deserialize JSON
+                }
             }
         }
         public static void LoadNotificationSettings() {
             if (File.Exists(notificationsSettingsFilePath))
             {
-                mailConfig = JsonConvert.DeserializeObject<MailConfig>(File.ReadAllText(notificationsSettingsFilePath));
+                try
+                {
+                    mailConfig = JsonConvert.DeserializeObject<MailConfig>(File.ReadAllText(notificationsSettingsFilePath));
+                } 
+                catch (Exception e){
+                    Console.WriteLine($"{e.Message}");
+                    Environment.Exit(101); //exit with code 101 - problem with deserialize JSON
+                }
             }
         }
         public static void LoadDataFromJson()
@@ -51,7 +65,7 @@ namespace TaskWorker
             catch (Exception e)
             {
                 Console.WriteLine($"{e.Message}");
-                Environment.Exit(101);
+                Environment.Exit(101); //exit with code 101 - problem with deserialize JSON
             }
         }
 
