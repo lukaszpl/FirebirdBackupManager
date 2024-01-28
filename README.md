@@ -21,8 +21,10 @@ Screenshots:
 ![obraz](https://github.com/lukaszpl/FirebirdBackupManager/assets/15281422/64fd7436-5f6c-44bb-8d7b-dfb958a30a3f)
 
 
+
 Installer download (v1.1):
-https://lsoroczynski.com/downloads/FirebirdBackupManagerInstaller v1.1.0.exe
+https://lsoroczynski.com/downloads/FirebirdBackupManagerInstallerv1.1.0.exe
+
 Installer download (v1.0):
 https://lsoroczynski.com/downloads/FirebirdBackupManagerInstaller.exe
 
